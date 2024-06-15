@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'PDFViewerPage.dart';
 
-class detailbuku1 extends StatelessWidget {
-  const detailbuku1({super.key}) ;
+class detailbuku1  extends StatelessWidget {
+  const detailbuku1 ({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Detail Buku'),
+      ),
       body: Padding(
         padding: EdgeInsets.only(
           top: 24,
@@ -66,6 +70,18 @@ class detailbuku1 extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+            SizedBox(height: 40),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PDFViewerPage(),
+                  ),
+                );
+              },
+              child: Text('Tampilkan PDF'),
             ),
           ],
         ),
